@@ -22,10 +22,6 @@ class WatchlistViewController: UIViewController {
         super.viewDidLoad()
         presenter = WatchlistPresenter()
         setAddButton()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         initTableView()
     }
     

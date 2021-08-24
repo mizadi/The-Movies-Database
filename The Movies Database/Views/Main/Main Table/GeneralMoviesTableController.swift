@@ -75,7 +75,8 @@ class GeneralMoviesTableController: NSObject, UITableViewDelegate, UITableViewDa
         if (offsetY > contentHeight - scrollView.frame.height * 4) && !isLoading {
             if page != nil {
                 isLoading = true
-                delegate.loadMoreMovies(page: page + 1)
+                page+=1
+                delegate.loadMoreMovies(page: page)
             }
         }
     }
