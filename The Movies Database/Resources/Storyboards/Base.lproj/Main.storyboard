@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="The_Movies_Database" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sf5-jY-b6I">
+                                <rect key="frame" x="0.0" y="44" width="414" height="70"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="TcP-YN-fYs">
+                                        <rect key="frame" x="123.5" y="19.5" width="167" height="32"/>
+                                        <segments>
+                                            <segment title="Movies"/>
+                                            <segment title="Watchlists"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HdG-Pm-Rie">
+                                        <rect key="frame" x="348" y="10" width="50" height="50"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="magnifyingglass" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="BVj-it-JsG">
+                                                <rect key="frame" x="10" y="11" width="30" height="28"/>
+                                                <color key="tintColor" systemColor="secondaryLabelColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="BVj-it-JsG" secondAttribute="height" multiplier="1:1" id="W3R-Nb-MfS"/>
+                                                </constraints>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="BVj-it-JsG" firstAttribute="centerX" secondItem="HdG-Pm-Rie" secondAttribute="centerX" id="Lss-C4-CYG"/>
+                                            <constraint firstAttribute="width" secondItem="HdG-Pm-Rie" secondAttribute="height" multiplier="1:1" id="Zfd-DK-IrK"/>
+                                            <constraint firstItem="BVj-it-JsG" firstAttribute="width" secondItem="HdG-Pm-Rie" secondAttribute="width" multiplier="0.6" id="dKh-iv-0vX"/>
+                                            <constraint firstItem="BVj-it-JsG" firstAttribute="centerY" secondItem="HdG-Pm-Rie" secondAttribute="centerY" id="uSj-mz-CcK"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="2tq-T9-B12"/>
+                                    <constraint firstAttribute="trailing" secondItem="HdG-Pm-Rie" secondAttribute="trailing" constant="16" id="KQl-aW-b1H"/>
+                                    <constraint firstItem="HdG-Pm-Rie" firstAttribute="height" secondItem="sf5-jY-b6I" secondAttribute="height" multiplier="0.714286" id="XdO-3X-oBq"/>
+                                    <constraint firstItem="TcP-YN-fYs" firstAttribute="centerY" secondItem="sf5-jY-b6I" secondAttribute="centerY" id="aVX-a2-CZ9"/>
+                                    <constraint firstItem="HdG-Pm-Rie" firstAttribute="centerY" secondItem="sf5-jY-b6I" secondAttribute="centerY" id="cRc-pS-ByH"/>
+                                    <constraint firstItem="TcP-YN-fYs" firstAttribute="centerX" secondItem="sf5-jY-b6I" secondAttribute="centerX" id="u3S-eQ-n1E"/>
+                                </constraints>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hVY-bo-Pi2">
+                                <rect key="frame" x="0.0" y="114" width="414" height="782"/>
+                                <connections>
+                                    <segue destination="pGy-nK-0xg" kind="embed" identifier="mainPageController" id="le2-M0-ZSa"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hVY-bo-Pi2" secondAttribute="trailing" id="2Wk-VQ-1gb"/>
+                            <constraint firstItem="hVY-bo-Pi2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3SI-DX-Rc8"/>
+                            <constraint firstItem="hVY-bo-Pi2" firstAttribute="top" secondItem="sf5-jY-b6I" secondAttribute="bottom" id="DY6-Ze-faX"/>
+                            <constraint firstItem="sf5-jY-b6I" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Xgs-On-k5v"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="sf5-jY-b6I" secondAttribute="top" id="Zcb-KN-dEb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sf5-jY-b6I" secondAttribute="trailing" id="fN5-dO-0hX"/>
+                            <constraint firstAttribute="bottom" secondItem="hVY-bo-Pi2" secondAttribute="bottom" id="ieU-wE-CIR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="segmentedControl" destination="TcP-YN-fYs" id="H0N-1b-yny"/>
+                        <outlet property="vwSearch" destination="HdG-Pm-Rie" id="ea9-hI-Jb4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55.072463768115945" y="87.723214285714278"/>
+        </scene>
+        <!--Main Pager Controller-->
+        <scene sceneID="pQu-Mj-aQT">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="pGy-nK-0xg" customClass="MainPagerController" customModule="The_Movies_Database" customModuleProvider="target" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ial-TS-p3S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="783" y="88"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
